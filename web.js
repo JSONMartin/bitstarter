@@ -6,7 +6,8 @@ app.use(express.logger());
 app.get('/', function(request, response) 
 {
   //response.send('Hello World 2!');
-    var buffer = new Buffer(
+    var fs = require('fs');
+   var buffer = new Buffer(
  fs.readFileSync('index.html', function (err, data)
 		    {
 			if (err) throw err;
