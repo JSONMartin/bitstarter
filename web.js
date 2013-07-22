@@ -20,10 +20,11 @@ buf = fs.readFileSync('index.html', function (err, data)
 		    });
     //buf.toString('utf-8');
     //response.send('Did not crash');
+    response.send ( buf.toString('utf-8') );
 });
 
 //data.toString('utf-8');
-response.send( buf.toString('utf-8') );
+
 
 
 
