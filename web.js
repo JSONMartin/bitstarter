@@ -9,7 +9,6 @@ app.get('/', function(request, response)
    var fs = require('fs');
    var buf = new Buffer(256);
    
-/*
 fs.readFileSync('index.html', function (err, data)
 		    {
 			if (err) throw err;
@@ -18,7 +17,7 @@ fs.readFileSync('index.html', function (err, data)
 		    });
     //buf.toString('utf-8');
 });
-*/
+
 });
 
 var port = process.env.PORT || 5000;
