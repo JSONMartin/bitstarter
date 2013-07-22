@@ -7,13 +7,13 @@ app.get('/', function(request, response)
 {
   //response.send('Hello World 2!');
     var fs = require('fs');
-   var buffer = new Buffer(
- fs.readFileSync('index.html', function (err, data)
+   var buf = new Buffer(256);
+    buf = fs.readFileSync('index.html', function (err, data)
 		    {
 			if (err) throw err;
 			console.log(data);
-		}), "utf-8");
-    buffer.toString('utf-8');
+		});
+    buf.toString('utf-8');
 });
 
 var port = process.env.PORT || 5000;
