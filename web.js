@@ -9,7 +9,8 @@ app.get('/', function(request, response)
    var fs = require('fs');
    var buf = new Buffer("Test buffer string!", "utf-8");
    
-    response.send('Did not crash');
+//response.send('Did not crash');
+    response.send ( buf.toString('utf-8') );
 
 fs.readFileSync('index.html', function (err, data)
 		    {
@@ -22,7 +23,9 @@ fs.readFileSync('index.html', function (err, data)
 });
 
 //data.toString('utf-8');
-response.send( buf.toString('utf-8') );
+//response.send( buf.toString('utf-8') );
+
+
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
