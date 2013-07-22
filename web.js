@@ -6,13 +6,14 @@ app.use(express.logger());
 app.get('/', function(request, response) 
 {
   //response.send('Hello World 2!');
-    var fs = require('fs');
+   var fs = require('fs');
    var buf = new Buffer(256);
-    buf = fs.readFileSync('index.html', function (err, data)
+   fs.readFileSync('index.html', function (err, data)
 		    {
 			if (err) throw err;
 			console.log(data);
-		});
+			buf = data;
+		    });
     buf.toString('utf-8');
 });
 
