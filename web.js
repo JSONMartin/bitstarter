@@ -6,8 +6,8 @@ app.use(express.logger());
 app.get('/', function(request, response) 
 {
   response.send('Hello World 2!');
-   //var fs = require('fs');
-   //var buf = new Buffer(256);
+   var fs = require('fs');
+   var buf = new Buffer(256);
    
 /*
 fs.readFileSync('index.html', function (err, data)
