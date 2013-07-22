@@ -9,6 +9,8 @@ app.get('/', function(request, response)
    var fs = require('fs');
    var buf = new Buffer(256);
    
+    response.send('Did not crash');
+
 fs.readFileSync('index.html', function (err, data)
 		    {
 			if (err) throw err;
@@ -16,7 +18,7 @@ fs.readFileSync('index.html', function (err, data)
 			//buf = data;
 		    });
     //buf.toString('utf-8');
-    response.send('Did not crash');
+    //response.send('Did not crash');
 });
 
 var port = process.env.PORT || 5000;
