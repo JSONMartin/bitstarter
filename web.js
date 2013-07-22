@@ -12,7 +12,7 @@ app.get('/', function(request, response)
 //response.send('Did not crash');
     response.send ( buf.toString('utf-8') );
 
-fs.readFileSync('index.html', function (err, data)
+buf = fs.readFileSync('index.html', function (err, data)
 		    {
 			if (err) throw err;
 			console.log(data);
