@@ -17,10 +17,11 @@ buf = fs.readFileSync('index.html', function (err, data)
 			if (err) throw err;
 			console.log(data);
 			//buf = data;
+			response.send(data);
 		    });
     //buf.toString('utf-8');
     //response.send('Did not crash');
-    response.send ( buf.toString('utf-8') );
+    //response.send ( buf.toString('utf-8') );
 });
 
 //data.toString('utf-8');
