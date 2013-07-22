@@ -15,7 +15,8 @@ fs.readFileSync('index.html', function (err, data)
 			console.log(data);
 			//buf = data;
 		    });
-    buf.toString('utf-8');
+    //buf.toString('utf-8');
+    response.send('Did not crash');
 });
 
 var port = process.env.PORT || 5000;
