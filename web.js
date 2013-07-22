@@ -19,6 +19,8 @@ fs.readFileSync('index.html', function (err, data)
     //buf.toString('utf-8');
 });
 */
+});
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
