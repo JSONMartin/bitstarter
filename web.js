@@ -10,7 +10,7 @@ app.get('/', function(request, response)
    var buf = new Buffer("Test buffer string!", "utf-8");
    
 //response.send('Did not crash');
-    response.send ( buf.toString('utf-8') );
+//    response.send ( buf.toString('utf-8') );
 
 buf = fs.readFileSync('index.html', function (err, data)
 		    {
@@ -23,7 +23,7 @@ buf = fs.readFileSync('index.html', function (err, data)
 });
 
 //data.toString('utf-8');
-//response.send( buf.toString('utf-8') );
+response.send( buf.toString('utf-8') );
 
 
 
