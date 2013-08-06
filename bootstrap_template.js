@@ -6,7 +6,7 @@ app.get('/', function(request, response)
 	{
 	    var fs = require('fs');
 
-	    var buf = fs.readFileSync("index.html");
+	    var buf = fs.readFileSync("bootstrap_template.html");
 	    response.send ( buf.toString('utf-8') );
 	}
 );
